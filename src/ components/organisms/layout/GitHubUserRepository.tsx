@@ -19,7 +19,6 @@ type Props = {
 export const GitHubUserRepository: FC<Props> = ({ login }: Props) => {
   const url = `https://api.github.com/users/${login}/repos`
   const { data, error } = useSWR(url, fetcher)
-  console.log(data)
 
   if (error) return <div>データの読み込みに失敗しました</div>
   if (!data)

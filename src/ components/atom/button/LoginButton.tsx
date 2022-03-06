@@ -10,7 +10,6 @@ function LoginButton() {
   const { isAuthenticated, loginWithRedirect } = useAuth0()
 
   setisAuth(false)
-  console.log(isAuth)
 
   return !isAuthenticated ? (
     <Button colorScheme="orange" onClick={loginWithRedirect}>

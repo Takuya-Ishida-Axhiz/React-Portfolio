@@ -9,14 +9,13 @@ function LogoutButton(props: any) {
   const { user, isAuthenticated, logout } = useAuth0()
   const [userInfo, setuserInfo] = useRecoilState(userState)
   const { showMessage } = useMessage()
-  console.log(userInfo)
 
   if (userInfo.sub === '') {
     showMessage({ title: 'ログインに成功しました', status: 'success' })
   } else {
   }
   setuserInfo(user)
-  console.log('再描画されました')
+  // console.log('再描画されました')
 
   return isAuthenticated ? (
     <div>
